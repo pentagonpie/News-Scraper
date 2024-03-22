@@ -27,7 +27,7 @@ export class Prefrence {
                 throw error("in decision news is null");
             }
             this.decision = decision;
-            //console.log(" news in prefrence constructor ", news);
+
             if (index < news.length) {
                 this.words = news[index].getWords();
 

@@ -23,7 +23,6 @@ class Prefrence {
                 throw (0, console_1.error)("in decision news is null");
             }
             this.decision = decision;
-            //console.log(" news in prefrence constructor ", news);
             if (index < news.length) {
                 this.words = news[index].getWords();
             }

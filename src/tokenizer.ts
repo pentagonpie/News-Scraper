@@ -1,15 +1,10 @@
-import { rater } from "./rater";
-
 export class tokenizer {
 
-
-    constructor() {
-
-    }
+    constructor() { }
 
     static tokenize(sentence: string): string[] {
         var natural = require('natural');
-        //console.log("trying to tokenize ", sentence);
+
 
         let words = natural.PorterStemmer.tokenizeAndStem(sentence);
         return this.clean(words);

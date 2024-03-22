@@ -9,7 +9,6 @@ class rater {
         var natural = require('natural');
         //var tokenizer = new natural.WordTokenizer();
         let words = natural.PorterStemmer.tokenizeAndStem(input);
-        //console.log("words in new sentence are: ", words);
         for (let prefrence of prefrences) {
             let similarity = this.similar(words, prefrence);
             if (similarity > best) {
@@ -19,7 +18,6 @@ class rater {
         return best;
     }
     static similar(input, words) {
-        // console.log("\nChecking similarity of ", input);
         let matches = 0;
         let total = words.words.length;
         for (let word of input) {
@@ -27,7 +25,6 @@ class rater {
                 matches++;
             }
         }
-        // console.log("got ", matches / total);
         return matches / total;
     }
 }

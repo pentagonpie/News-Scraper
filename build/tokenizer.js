@@ -2,11 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.tokenizer = void 0;
 class tokenizer {
-    constructor() {
-    }
+    constructor() { }
     static tokenize(sentence) {
         var natural = require('natural');
-        //console.log("trying to tokenize ", sentence);
         let words = natural.PorterStemmer.tokenizeAndStem(sentence);
         return this.clean(words);
     }
