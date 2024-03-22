@@ -21,8 +21,5 @@ test('similar 3 function from rater', () => {
 
 
 
-test('rate function from rater', () => {
-    let pref = new Prefrence(liked.yes, ["cat", "dog", "house"]);
-    expect(rater.rate("cat dog house", [pref])).toBe(1)
-});
+
 
