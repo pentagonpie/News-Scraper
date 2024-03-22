@@ -20,14 +20,11 @@ class Page {
         }
         else {
             this.words = tokenizer_1.tokenizer.tokenize(title);
-            // console.log("words before:", this.words);
-            // console.log("link: ", link);
             try {
                 const urlString = link;
                 const url = new URL(urlString);
                 const siteName = url.hostname; // 'www.example.com'
                 this.words.push(siteName);
-                //console.log("words after:", this.words)
             }
             catch (error) {
                 console.log("error on this link");
@@ -49,6 +46,9 @@ class Page {
     }
     getScore() {
         return this.score;
+    }
+    getScoreString() {
+        return this.score.toPrecision(2);
     }
     userLike() {
         this.decision = liked.yes;

@@ -27,14 +27,13 @@ export class Page {
             this.words = words;
         } else {
             this.words = tokenizer.tokenize(title);
-            // console.log("words before:", this.words);
-            // console.log("link: ", link);
+
             try {
                 const urlString = link;
                 const url = new URL(urlString);
                 const siteName = url.hostname; // 'www.example.com'
                 this.words.push(siteName);
-                //console.log("words after:", this.words)
+
 
             } catch (error) {
                 console.log("error on this link");
@@ -61,6 +60,9 @@ export class Page {
 
     getScore(): number {
         return this.score;
+    }
+    getScoreString(): string {
+        return this.score.toPrecision(2);
     }
 
     userLike() {
