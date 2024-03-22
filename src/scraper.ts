@@ -24,7 +24,7 @@ export class scraper {
         }).get();
 
 
-        // console.log("all links: ", links);
+
         let pages: Page[] = [];
 
         //Check if valid link exists, and title not empty, then add new page to list
@@ -43,7 +43,7 @@ export class scraper {
 
         for (let page of pages) {
             let single = {};
-            //single[title] = 
+
         }
     }
 

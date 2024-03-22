@@ -31,7 +31,6 @@ class scraper {
             const links = $('.titleline a:first-of-type').map((index, element) => {
                 return $(element).attr('href');
             }).get();
-            // console.log("all links: ", links);
             let pages = [];
             //Check if valid link exists, and title not empty, then add new page to list
             for (let i = 0; i < titles.length; i++) {
@@ -46,7 +45,6 @@ class scraper {
         let result = [];
         for (let page of pages) {
             let single = {};
-            //single[title] = 
         }
     }
 }

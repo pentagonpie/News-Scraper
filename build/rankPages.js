@@ -18,7 +18,7 @@ class rankPages {
         });
         let x = 1;
         for (let page of pages) {
-            console.log(x, "(", page.getScore(), "): ", page.asString());
+            console.log(x, "(score ", page.getScoreString(), "): ", page.asString());
             console.log();
             x++;
         }
