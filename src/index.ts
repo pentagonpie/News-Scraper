@@ -18,7 +18,6 @@ async function main() {
     program
         .version("1.0.0")
         .description("Hackernews based recommendation engine")
-        .option("-p", "show list of past prefrences on old news")
         .option("-n", "show todays news")
         .option("-o", "show old news")
         .option("-l, --like <value>", "like an article")
@@ -94,10 +93,6 @@ async function getNewNews(scraper: scraper) {
         .catch((err) => {
             console.error('Error getting prefrences:', err);
         });
-
-
-
-
 
 
 }
